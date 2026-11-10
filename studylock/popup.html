@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>StudyLock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="popup" data-phase="focus">
+  <header>
+    <img src="icons/icon48.png" alt="">
+    <h1>StudyLock</h1>
+    <button id="openOptions" class="link" title="Settings &amp; stats">⚙ Settings</button>
+  </header>
+
+  <div id="permBanner" class="banner hidden" style="margin-top:10px">
+    StudyLock needs access to websites to block them.
+    <button id="grantPerm" class="primary" style="margin-top:6px;width:100%">Allow site access</button>
+  </div>
+
+  <div class="center"><span id="phase" class="phase-pill">Focus</span></div>
+
+  <div class="ring">
+    <svg width="180" height="180" viewBox="0 0 180 180">
+      <circle class="track" cx="90" cy="90" r="80" fill="none" stroke-width="10"></circle>
+      <circle id="progress" class="progress" cx="90" cy="90" r="80" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+    </svg>
+    <div class="time"><span id="time">25:00</span><small id="statusText">Ready</small></div>
+  </div>
+
+  <div class="controls">
+    <button id="reset" title="Stop and go back to a fresh focus session">Reset</button>
+    <button id="main" class="primary">Start</button>
+    <button id="skip" title="Skip to the next phase">Skip</button>
+  </div>
+
+  <div id="dots" class="dots"></div>
+  <div id="error" class="error"></div>
+
+  <footer>
+    <span id="today">Today: 0 sessions</span>
+    <span id="blockInfo"></span>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

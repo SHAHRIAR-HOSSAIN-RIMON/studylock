@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>StudyLock settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="options">
+    <h1><img src="icons/icon128.png" alt=""> StudyLock</h1>
+    <p class="muted">Settings save automatically. Everything is stored only in this browser.</p>
+
+    <section>
+      <h2>Timer</h2>
+      <div class="grid">
+        <label>Focus (minutes)<input id="focusMin" type="number" min="1" max="180"></label>
+        <label>Short break (minutes)<input id="shortBreakMin" type="number" min="1" max="60"></label>
+        <label>Long break (minutes)<input id="longBreakMin" type="number" min="1" max="120"></label>
+        <label>Long break after every<input id="longBreakEvery" type="number" min="1" max="12"></label>
+      </div>
+      <label class="check"><input id="autoStartBreak" type="checkbox"> Start breaks automatically</label>
+      <label class="check"><input id="autoStartFocus" type="checkbox"> Start the next focus session automatically after a break</label>
+      <label class="check"><input id="strictMode" type="checkbox"> Strict mode <small>— no pause, skip or reset while a focus session is running</small></label>
+    </section>
+
+    <section>
+      <h2>Blocked sites</h2>
+      <p class="muted" style="margin-top:-6px">Blocked only during focus sessions. Subdomains are included (blocking <b>youtube.com</b> also blocks <b>m.youtube.com</b>).</p>
+      <form id="addForm" class="add-row">
+        <input id="siteInput" type="text" placeholder="e.g. instagram.com or paste a link" autocomplete="off">
+        <button class="primary" type="submit">Add</button>
+      </form>
+      <div id="siteError" class="error" style="text-align:left"></div>
+      <div id="chips" class="chips"></div>
+      <div class="presets">
+        <span class="muted">Quick add:</span>
+        <button type="button" data-preset="social">Social media</button>
+        <button type="button" data-preset="video">Video &amp; streaming</button>
+        <button type="button" data-preset="news">News</button>
+        <button type="button" data-preset="games">Games</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Last 7 days</h2>
+      <div id="bars" class="bars"></div>
+      <div class="totals">
+        <div><b id="weekMinutes">0</b>focus minutes this week</div>
+        <div><b id="weekSessions">0</b>sessions this week</div>
+        <div><b id="streak">0</b>day streak</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Your data</h2>
+      <p class="muted" style="margin-top:-6px">Export a backup, or move your settings and stats to another browser.</p>
+      <div class="controls" style="justify-content:flex-start">
+        <button id="exportBtn" type="button">Export backup</button>
+        <button id="importBtn" type="button">Import backup</button>
+        <input id="importFile" type="file" accept="application/json" class="hidden">
+        <button id="clearStats" type="button">Clear stats</button>
+      </div>
+    </section>
+  </main>
+  <div id="toast" class="toast">Saved</div>
+
+  <script src="shared.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
