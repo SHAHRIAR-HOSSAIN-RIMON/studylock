@@ -27,9 +27,13 @@ studylock/          ← the extension itself (load or zip this folder)
   style.css
   icons/
 tests/              Node tests with a fake browser API
-build.ps1           makes dist/studylock-<version>.zip for the stores
+build.ps1           makes the store zips in dist/ (one for Edge/Chrome, one for Firefox)
+store-assets/       store screenshots (1280×800) and promo tile
+STORE_LISTING.md    ready-to-paste store descriptions and permission reasons
 PRIVACY.md          privacy policy (host it on GitHub Pages for the store listings)
 ```
+
+> When loading the unpacked `studylock` folder in Edge/Chrome you'll see a harmless warning about `background.scripts`. That line is for Firefox. The store zips made by `build.ps1` don't include it.
 
 ## Try it locally
 **Chrome / Edge**
@@ -50,11 +54,14 @@ node --test tests/*.test.js
 ```
 
 ## Publish (free)
-1. Run `powershell -File build.ps1` to create `dist/studylock-1.0.0.zip`
-2. Host `PRIVACY.md` publicly (e.g. GitHub Pages) and use its link in the store forms
-3. **Microsoft Edge Add-ons** (free): register at Partner Center → Edge program, then upload the zip
-4. **Firefox Add-ons** (free): sign in at addons.mozilla.org/developers, then upload the same zip.
-   Before the first upload, change `browser_specific_settings.gecko.id` in `manifest.json` to your own ID (e.g. `studylock@yourname`)
-5. **Chrome Web Store** (optional, $5 one-time): upload the same zip
+1. Run `powershell -ExecutionPolicy Bypass -File build.ps1`. It creates:
+   - `dist/studylock-<version>-chromium.zip` for Edge and Chrome
+   - `dist/studylock-<version>-firefox.zip` for Firefox
+2. Turn on GitHub Pages (repo **Settings → Pages → Deploy from branch → main / root**) so `PRIVACY.md` gets a public link
+3. **Microsoft Edge Add-ons** (free): register at Partner Center → Edge program, then upload the chromium zip
+4. **Firefox Add-ons** (free): sign in at addons.mozilla.org/developers, then upload the firefox zip
+5. **Chrome Web Store** (optional, $5 one-time): upload the chromium zip
 
-For each store you need: a short and long description, at least one 1280×800 screenshot, the 128px icon, the privacy policy link, and a one-line reason for each permission (see PRIVACY.md).
+All the text for the store forms (descriptions, permission reasons, data-usage answers) is in [STORE_LISTING.md](STORE_LISTING.md), and the images are in `store-assets/`.
+
+To release an update: bump `version` in `studylock/manifest.json`, run `build.ps1` again, and upload the new zips.
