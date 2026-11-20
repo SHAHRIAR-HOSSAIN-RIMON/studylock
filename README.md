@@ -46,7 +46,7 @@ Install it from **[Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/add
 
 ### Install on Chrome / Edge
 StudyLock isn't on the Chrome or Edge stores yet, but you can install it directly:
-1. Click the green **Code** button on this page, then **Download ZIP**, and unzip it
+1. [Download the ZIP](https://github.com/SHAHRIAR-HOSSAIN-RIMON/studylock/archive/refs/heads/main.zip) and unzip it
 2. Open `chrome://extensions` (or `edge://extensions`)
 3. Turn on **Developer mode** (top right in Chrome, left side in Edge)
 4. Click **Load unpacked** and select the `studylock` folder inside what you unzipped
@@ -105,10 +105,11 @@ node --test tests/*.test.js
 3. Upload the zips to the stores. Store text is in [STORE_LISTING.md](STORE_LISTING.md) and images are in `store-assets/`
 
 ## Roadmap
-- [x] Firefox Add-ons
-- [ ] Microsoft Edge Add-ons
-- [ ] Chrome Web Store
-- [ ] Scheduled blocking (e.g. block every weekday 9–5)
+- ✅ Firefox Add-ons
+- ⬜ Microsoft Edge Add-ons
+- ⬜ Chrome Web Store
+- ⬜ Scheduled blocking (e.g. block every weekday 9–5)
+
 
 ## Feedback
 Found a bug or have an idea? [Open an issue](https://github.com/SHAHRIAR-HOSSAIN-RIMON/studylock/issues). Feedback from fellow students is very welcome!
