@@ -26,13 +26,15 @@ I wanted a simple timer that actually locks the distractions while I study, with
 - 🌗 **Light and dark theme**
 
 ## Screenshots
-| Blocked site | Settings | Stats |
-|---|---|---|
-| <img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/f24f4023-0f2a-4549-8248-610d64af5d28" />
- | <img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/bbd4a54d-5428-47b7-b6e4-e7a53c1d2d3d" />
- | <img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/c5a0b4cf-da5e-4b2c-ac24-f2354231f17a" />
- |
 
+**Distracting sites show a countdown instead**
+<img src="https://github.com/user-attachments/assets/f24f4023-0f2a-4549-8248-610d64af5d28" alt="Blocked site page" width="700">
+
+**Block any site you want**
+<img src="https://github.com/user-attachments/assets/bbd4a54d-5428-47b7-b6e4-e7a53c1d2d3d" alt="Settings page" width="700">
+
+**Track your study time and streak**
+<img src="https://github.com/user-attachments/assets/c5a0b4cf-da5e-4b2c-ac24-f2354231f17a" alt="Stats page" width="700">
 ## Privacy
 StudyLock has **no account, no analytics and no server**. Your settings, block list and stats are stored only in your browser.
 Full policy: [PRIVACY.md](PRIVACY.md)
