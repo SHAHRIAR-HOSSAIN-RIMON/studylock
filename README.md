@@ -116,4 +116,4 @@ Found a bug or have an idea? [Open an issue](https://github.com/SHAHRIAR-HOSSAIN
 
 ## License
 MIT. See [LICENSE](LICENSE).<img width="1280" height="800" alt="promp1" src="https://github.com/user-attachments/assets/0e663e90-b9ed-45bc-9f93-ccc8e5e1becf" />
-<img width="1280" height="800" alt="promp1" src="https://github.com/user-attachments/assets/0cbe32b5-dd84-4cb9-ac7a-edd041de56b6" />
+
